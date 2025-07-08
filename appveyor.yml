@@ -5,6 +5,10 @@ cache:
 
 shallow_clone: true
 
+branches:
+  only:
+    - never-build
+
 matrix:
   allow_failures:
     - NOV: 14
