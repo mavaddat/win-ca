@@ -6,6 +6,18 @@
 
 Get Windows System Root certificates for [Node.js].
 
+## Deprecation notice
+
+`win-ca` is no longer supported.
+
+Since Node.js v22.15.0 one can
+```js
+import { globalAgent } from 'https'
+import { getCACertificates } from 'node:tls'
+
+globalAgent.options.ca = getCACertificates('system')
+```
+
 ## Rationale
 
 Unlike [Ruby][], [Node.js][] on Windows **allows**
